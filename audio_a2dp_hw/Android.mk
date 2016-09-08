@@ -12,7 +12,10 @@ LOCAL_C_INCLUDES += \
 	$(LOCAL_PATH)/../ \
 	$(LOCAL_PATH)/../utils/include
 
+ifeq ($(strip $(AUDIO_FEATURE_ENABLED_SPLIT_A2DP)),true)
 LOCAL_CFLAGS = -DBT_HOST_IPC_ENABLED
+endif
+
 LOCAL_MODULE := audio.a2dp.default
 LOCAL_MODULE_RELATIVE_PATH := hw
 
