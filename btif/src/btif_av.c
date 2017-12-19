@@ -3253,6 +3253,7 @@ BOOLEAN btif_av_stream_started_ready(void)
     return status;
 }
 
+#ifdef BTA_AV_SPLIT_A2DP_ENABLED
 /*******************************************************************************
 **
 ** Function         btif_av_stream_started_ready
@@ -3285,6 +3286,7 @@ BOOLEAN btif_av_is_suspend_stop_pending_ack(void)
     BTIF_TRACE_DEBUG("btif_av_is_stream_suspend_pending_ack: %d", status);
     return status;
 }
+#endif
 
 /*******************************************************************************
 **
